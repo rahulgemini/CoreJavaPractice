@@ -1,5 +1,7 @@
 package com.rahulit.entities;
 
+import com.rahulit.interfaces.MyPredicate;
+
 public class Student {
     String name;
     int id;
@@ -18,5 +20,9 @@ public class Student {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public boolean testStudent(MyPredicate m){
+        return m.test();
     }
 }
