@@ -8,10 +8,12 @@ public class Main {
         System.out.println("Hello world! This is my first program created in intellij");
 
         Student s=new Student();
-        s.testStudent(()->s.getId()>2);
+        //s.testStudent(()->s.getId()>2);
+        s.testStudent(Main::testStudent);
     }
 
-    static void testStudent(){
-
+    static boolean testStudent(){
+        System.out.println("hi");
+        return true;
     }
 }
